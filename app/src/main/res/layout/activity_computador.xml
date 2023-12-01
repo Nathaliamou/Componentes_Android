@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".ComputadorActivity">
+
+    <TextView
+        android:id="@+id/tvtitulo1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textSize="25dp"
+        android:gravity="center"
+        android:layout_marginTop="30dp"
+        android:text="Computador" />
+
+    <LinearLayout
+        android:layout_width="370dp"
+        android:layout_height="120dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical">
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <RadioButton
+                android:id="@+id/rbCORE_5"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:onClick="Calcular_Computador"
+                android:textSize="25dp"
+                android:checked="true"
+                android:text=" CORE 5" />
+
+            <RadioButton
+                android:id="@+id/rbCORE_7"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:onClick="Calcular_Computador"
+                android:textSize="25dp"
+                android:text="CORE 7" />
+
+            <RadioButton
+                android:id="@+id/rbCORE_9"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:onClick="Calcular_Computador"
+                android:textSize="25dp"
+                android:text=" CORE 9" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvprocesadores"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="5dp"
+        android:textSize="25dp"
+        android:gravity="center"
+        android:text="1200000" />
+
+    <LinearLayout
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical">
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/rbRAM_8"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:checked="true"
+                android:onClick="Calcular_Computador"
+                android:text=" RAM 8"
+                android:textSize="25dp" />
+
+            <RadioButton
+                android:id="@+id/rbRAM_16"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:onClick="Calcular_Computador"
+                android:text="RAM 16"
+                android:textSize="25dp" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvtitulo2"
+        android:layout_width="370dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="5dp"
+        android:textSize="25dp"
+        android:layout_gravity="center"
+        android:text="Opcionales" />
+
+    <LinearLayout
+        android:layout_width="370dp"
+        android:layout_height="45dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/cbDISCO_SOLIDO"
+            android:layout_width="10dp"
+            android:layout_height="45dp"
+            android:textSize="25dp"
+            android:onClick="Calcular_Computador"
+            android:layout_weight="1"
+            android:text=" DISCO SOL" />
+
+        <TextView
+            android:id="@+id/tvDiscoSol"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:textSize="25dp"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:text="0" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="370dp"
+        android:layout_height="45dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/cbComponentes"
+            android:layout_width="10dp"
+            android:layout_height="45dp"
+            android:textSize="25dp"
+            android:onClick="Calcular_Computador"
+            android:layout_weight="1"
+            android:text="Componentes" />
+
+        <TextView
+            android:id="@+id/tvComponentes"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:textSize="25dp"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:text="0" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvsubtotal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:hint="Subtotal"
+        android:textSize="25dp" />
+
+    <TextView
+        android:id="@+id/tviva"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:hint="IVA"
+        android:textSize="25dp" />
+
+    <TextView
+        android:id="@+id/tvtotal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:hint="Total"
+        android:textSize="25dp" />
+
+    <Button
+        android:id="@+id/btcalcular"
+        android:layout_width="370dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="5dp"
+        android:textSize="20dp"
+        android:onClick="Calcular_Computador"
+        android:layout_gravity="center"
+        android:text="Total Computador" />
+
+    <LinearLayout
+        android:layout_width="370dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="5dp"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btlimpiar"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:textSize="20dp"
+            android:onClick="Limpiar"
+            android:layout_weight="1"
+            android:text="Limpiar" />
+
+        <Button
+            android:id="@+id/btregresar"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:textSize="20dp"
+            android:onClick="Regresar"
+            android:layout_marginLeft="7dp"
+            android:layout_weight="1"
+            android:text="Regresar" />
+    </LinearLayout>
+</LinearLayout>
